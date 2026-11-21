@@ -24,7 +24,7 @@ from django.db import connection
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Build paths inside the project like this: BASE_DIR / 'subdºir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 PACKAGE_DIR = Path(__file__).resolve().parent
 
@@ -43,8 +43,22 @@ else:
 
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-local-development-key')
 DEBUG = config('DEBUG', default=True, cast=bool)
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1,testserver,.onrender.com', cast=Csv())
-CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='https://*.onrender.com,http://localhost:8000,http://127.0.0.1:8000', cast=Csv())
+ALLOWED_HOSTS = [
+    host.rstrip('/')
+    for host in config(
+        'ALLOWED_HOSTS',
+        default='localhost,127.0.0.1,testserver,.onrender.com',
+        cast=Csv(),
+    )
+]
+CSRF_TRUSTED_ORIGINS = [
+    origin.rstrip('/')
+    for origin in config(
+        'CSRF_TRUSTED_ORIGINS',
+        default='https://*.onrender.com,http://localhost:8000,http://127.0.0.1:8000',
+        cast=Csv(),
+    )
+]
 USE_REMOTE_DB = config('USE_REMOTE_DB', default=(not DEBUG), cast=bool)
 
 if config('RENDER', default=False, cast=bool):
