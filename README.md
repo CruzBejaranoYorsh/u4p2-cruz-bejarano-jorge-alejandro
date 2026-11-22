@@ -1,19 +1,25 @@
-U4S8 — Cruz Bejarano Jorge Alejandro
-Demo en vivo (producción)
-https://u4s8-cruz-bejarano-jorge-alejandro.onrender.com
+# U4S8 — Cruz Bejarano Jorge Alejandro
 
-Qué hace este proyecto
+## Demo en vivo (producción)
+
+https://u4p2-cruz-bejarano-jorge-alejandro.onrender.com
+
+## Qué hace este proyecto
+
 Esta aplicación permite consultar y administrar servicios. Las personas pueden crear una cuenta e iniciar sesión para gestionar sus propios servicios, con información como título, descripción, precio y categoría.
 
 El listado incluye búsqueda por título y paginación. Cada usuario ve y modifica únicamente los servicios que le pertenecen.
 
-Stack técnico
+## Stack técnico
+
 Django + MySQL (Aiven) + Tailwind CSS + Render
 
-Cómo se prueba el aislamiento por usuario
+## Cómo se prueba el aislamiento por usuario
+
 Inicia sesión con dos cuentas distintas. Crea un servicio con la primera cuenta y luego entra con la segunda: ese servicio no debe aparecer en su listado. La aplicación filtra los servicios por el usuario autenticado y verifica también la propiedad del registro al editarlo o eliminarlo, por lo que una cuenta no puede gestionar los servicios de otra.
 
-Historial de prácticas por unidad
+## Historial de prácticas por unidad
+
 Unidad 1 — Front-End esencial
 Semana 1: estructura semántica con HTML5, secciones del portafolio personal, formulario con etiquetas y validación HTML, Git/GitHub y primer despliegue como sitio estático en Render.
 Semana 2: estilos con Tailwind CSS, diseño responsivo mobile-first con grid/flex, tarjetas y formulario estilizados, estados de interacción y revisión de accesibilidad/rendimiento con Lighthouse.
@@ -26,3 +32,14 @@ Semana 6: registro, login y logout con django.contrib.auth; sesiones, mensajes y
 Unidad 4 — Pulido y entrega final
 Semana 7: mejoras de experiencia de usuario, búsqueda, paginación y estados vacíos; revisión de interfaz, responsividad y accesibilidad; simulacro de live coding y preparación del guion de defensa.
 Semana 8: auditoría final de seguridad, respaldo de datos y revisión de migraciones; preparación del despliegue final, etiquetado y Release en GitHub, defensa oral y organización del portafolio final.
+
+## Correcciones u4p2
+
+- Los commits del README se hicieron desde la terminal de VS Code, no desde la página de GitHub.
+- El tag v1.0 se volvió a crear sobre el commit del README definitivo.
+- El video de correcciones se grabó completo, sin pausas ni cortes.
+
+## Entrega final
+
+- Release: https://github.com/CruzBejaranoYorsh/u4p2-cruz-bejarano-jorge-alejandro/releases/tag/v1.0
+- Producción: https://u4p2-cruz-bejarano-jorge-alejandro.onrender.com
