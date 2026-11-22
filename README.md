@@ -40,6 +40,5 @@ Semana 8: auditoría final de seguridad, respaldo de datos y revisión de migrac
 - El video de correcciones se grabó completo, sin pausas ni cortes.
 
 ## Entrega final
-
 - Release: https://github.com/CruzBejaranoYorsh/u4p2-cruz-bejarano-jorge-alejandro/releases/tag/v1.0
 - Producción: https://u4p2-cruz-bejarano-jorge-alejandro.onrender.com
